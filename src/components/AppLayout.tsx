@@ -9,136 +9,160 @@ export default function AppLayout() {
       name: "Home",
       path: "/",
       icon: Home,
-      activeColor: "from-blue-500 to-purple-600",
-      glowColor: "shadow-blue-500/50",
+      activeColor: "from-cyan-400 to-blue-500",
+      glowColor: "shadow-cyan-500/30",
+      hoverGlow: "hover:shadow-cyan-400/20",
     },
     {
       name: "About",
       path: "/about",
       icon: User,
-      activeColor: "from-green-500 to-teal-600",
-      glowColor: "shadow-green-500/50",
+      activeColor: "from-emerald-400 to-teal-500",
+      glowColor: "shadow-emerald-500/30",
+      hoverGlow: "hover:shadow-emerald-400/20",
     },
     {
       name: "Projects",
       path: "/projects",
       icon: FolderOpen,
-      activeColor: "from-orange-500 to-red-600",
-      glowColor: "shadow-orange-500/50",
+      activeColor: "from-orange-400 to-pink-500",
+      glowColor: "shadow-orange-500/30",
+      hoverGlow: "hover:shadow-orange-400/20",
     },
     {
       name: "Contact",
       path: "/contact",
       icon: Mail,
-      activeColor: "from-pink-500 to-rose-600",
-      glowColor: "shadow-pink-500/50",
+      activeColor: "from-purple-400 to-pink-500",
+      glowColor: "shadow-purple-500/30",
+      hoverGlow: "hover:shadow-purple-400/20",
     },
   ];
 
   return (
     <div className="min-h-screen bg-black text-white font-inter">
-      {/* Navigation - Sticky top on large screens */}
-      <nav className="hidden md:block sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800/50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-center items-center py-4">
-            <div className="relative bg-gray-900/90 backdrop-blur-md rounded-2xl border border-gray-700/50 p-3 shadow-2xl animate-pulse-glow">
-              {/* Glowing border animation */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-sm animate-border-glow"></div>
+      {/* Navigation - Glass Design for Desktop */}
+      <nav className="hidden md:block fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-fit">
+        <div className="relative">
+          {/* Glass container with enhanced glassmorphism */}
+          <div className="relative bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-2 shadow-2xl">
+            {/* Animated glass border glow */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-sm animate-pulse"></div>
 
-              <div className="relative flex space-x-2">
-                {navLinks.map((link) => {
-                  const IconComponent = link.icon;
-                  const isActive = location.pathname === link.path;
+            {/* Inner glass reflection */}
+            <div className="absolute inset-1 rounded-xl bg-gradient-to-t from-white/5 to-white/20 pointer-events-none"></div>
 
-                  return (
-                    <Link
-                      key={link.name}
-                      to={link.path}
-                      className={`
-                        relative px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 flex items-center gap-3 group overflow-hidden
-                        ${
-                          isActive
-                            ? `bg-gradient-to-r ${link.activeColor} text-white shadow-lg ${link.glowColor} transform scale-105`
-                            : "text-gray-300 hover:text-white hover:bg-gray-800/50 hover:scale-105 hover:shadow-lg hover:shadow-white/10"
-                        }
-                      `}
-                    >
-                      {/* Active state background glow */}
-                      {isActive && (
-                        <div
-                          className={`absolute inset-0 bg-gradient-to-r ${link.activeColor} opacity-20 blur-xl`}
-                        ></div>
-                      )}
+            {/* Navigation links */}
+            <div className="relative flex space-x-2">
+              {navLinks.map((link) => {
+                const IconComponent = link.icon;
+                const isActive = location.pathname === link.path;
 
-                      {/* Hover effect background */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`
+                      relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-500 flex items-center gap-2 group overflow-hidden
+                      ${
+                        isActive
+                          ? `text-white bg-white/10 transform scale-105 border border-white/30 backdrop-blur-xl`
+                          : `text-white/60 hover:text-white/90 hover:bg-white/5 hover:scale-105 ${link.hoverGlow}`
+                      }
+                    `}
+                  >
+                    {/* Active state glass reflection */}
+                    {isActive && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent rounded-xl"></div>
+                    )}
 
-                      <IconComponent
-                        className={`w-5 h-5 relative z-10 transition-transform duration-300 ${
-                          isActive ? "animate-bounce" : "group-hover:scale-110"
-                        }`}
-                      />
-                      <span className="relative z-10 font-poppins font-medium">
-                        {link.name}
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
+                    {/* Hover shimmer effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 rounded-xl"></div>
+
+                    <IconComponent
+                      className={`w-4 h-4 relative z-10 transition-all duration-300 ${
+                        isActive
+                          ? "animate-pulse drop-shadow-lg"
+                          : "group-hover:scale-110 group-hover:drop-shadow-lg"
+                      }`}
+                    />
+                    <span className="relative z-10 font-poppins font-medium tracking-wide text-sm">
+                      {link.name}
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Navigation - Full-width sticky bottom */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50">
-        <div className="flex justify-around items-center py-3 px-4">
-          {navLinks.map((link) => {
-            const IconComponent = link.icon;
-            const isActive = location.pathname === link.path;
+      {/* Mobile Navigation - Glass Design */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50">
+        <div className="relative">
+          {/* Glass container for mobile */}
+          <div className="relative bg-white/10 backdrop-blur-2xl border-t border-white/20 p-1.5 shadow-2xl">
+            {/* Mobile glass border glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-sm animate-pulse"></div>
 
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`
-                  relative flex flex-col items-center gap-1 px-4 py-2 rounded-xl transition-all duration-300 group
-                  ${
-                    isActive
-                      ? `bg-gradient-to-r ${link.activeColor} text-white shadow-lg ${link.glowColor} transform scale-105`
-                      : "text-gray-400 hover:text-white hover:bg-gray-800/50"
-                  }
-                `}
-              >
-                {/* Active state background glow */}
-                {isActive && (
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${link.activeColor} opacity-30 blur-lg rounded-xl`}
-                  ></div>
-                )}
+            {/* Inner glass reflection */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-white/20 pointer-events-none"></div>
 
-                <IconComponent
-                  className={`w-5 h-5 relative z-10 transition-transform duration-300 ${
-                    isActive ? "animate-bounce" : "group-hover:scale-110"
-                  }`}
-                />
-                <span
-                  className={`relative z-10 text-xs font-poppins font-medium transition-all duration-300 ${
-                    isActive
-                      ? "text-white"
-                      : "text-gray-400 group-hover:text-white"
-                  }`}
-                >
-                  {link.name}
-                </span>
-              </Link>
-            );
-          })}
+            {/* Mobile navigation links */}
+            <div className="relative flex justify-around items-center">
+              {navLinks.map((link) => {
+                const IconComponent = link.icon;
+                const isActive = location.pathname === link.path;
+
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`
+                      relative flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-500 group
+                      ${
+                        isActive
+                          ? `bg-gradient-to-r ${link.activeColor} text-white shadow-lg ${link.glowColor} transform scale-105`
+                          : `text-white/80 hover:text-white hover:bg-white/10 ${link.hoverGlow}`
+                      }
+                    `}
+                  >
+                    {/* Active state effects for mobile */}
+                    {isActive && (
+                      <>
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-r ${link.activeColor} opacity-15 blur-md rounded-lg`}
+                        ></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent rounded-lg"></div>
+                      </>
+                    )}
+
+                    <IconComponent
+                      className={`w-4 h-4 relative z-10 transition-all duration-300 ${
+                        isActive
+                          ? "animate-pulse drop-shadow-md"
+                          : "group-hover:scale-110"
+                      }`}
+                    />
+                    <span
+                      className={`relative z-10 text-xs font-poppins font-medium transition-all duration-300 ${
+                        isActive
+                          ? "text-white drop-shadow-md"
+                          : "text-white/80 group-hover:text-white"
+                      }`}
+                    >
+                      {link.name}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </nav>
 
-      {/* Main content area - Add padding for sticky navs */}
-      <main className="max-w-7xl mx-auto py-4 px-4 pb-24 md:pb-8">
+      {/* Main content area - Adjusted padding for glass navs */}
+      <main className="  py-6 px-4  pb-20 md:pb-8 bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <Outlet />
       </main>
     </div>

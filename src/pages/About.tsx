@@ -55,7 +55,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-6 lg:px-12 relative overflow-hidden">
+    <div className="min-h-screen py-10  px-6 lg:px-12 relative overflow-hidden">
       {/* Animated Background SVG Paths */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">

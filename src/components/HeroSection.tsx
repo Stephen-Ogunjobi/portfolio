@@ -25,25 +25,25 @@ export default function HeroSection() {
     {
       name: "GitHub",
       icon: FaGithub,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/stephen-ogunjobi",
       color: "hover:text-gray-300",
     },
     {
       name: "LinkedIn",
       icon: FaLinkedin,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/stephen-ogunjobi-466ab0312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       color: "hover:text-blue-400",
     },
     {
       name: "Email",
       icon: FaEnvelope,
-      url: "mailto:your.email@example.com",
+      url: "mailto:stephenogunjobi400@gmail.com",
       color: "hover:text-red-400",
     },
     {
       name: "TikTok",
       icon: FaTiktok,
-      url: "https://tiktok.com/@yourusername",
+      url: "https://tiktok.com/@successful.codes",
       color: "hover:text-pink-400",
     },
   ];
@@ -65,12 +65,101 @@ export default function HeroSection() {
   const duplicatedTechStack = [...techStack, ...techStack];
 
   return (
-    <div className="min-h-screen  overflow-hidden">
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-12 py-12 lg:py-24">
-        {/* Mobile Layout - Single Column */}
+    <div
+      id="home"
+      className="min-h-[90vh] lg:min-h-screen overflow-hidden relative"
+    >
+      {/* Thunder Strike Animation */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 1200 800"
+          fill="none"
+        >
+          {/* Thunder Strike Path */}
+          <path
+            d="M950,80 L930,150 L970,170 L940,240 L980,260 L950,330"
+            stroke="url(#thunderGradient2)"
+            strokeWidth="2"
+            fill="none"
+            opacity="0.6"
+            className={`transition-all duration-400 ${
+              isLoaded ? "animate-thunder-strike" : ""
+            }`}
+            style={{
+              strokeDasharray: "300",
+              strokeDashoffset: isLoaded ? "0" : "300",
+              animationDelay: "3.5s",
+            }}
+          />
+
+          {/* Thunder Glow Effect */}
+          <circle
+            cx="950"
+            cy="330"
+            r="15"
+            fill="url(#thunderGlow2)"
+            opacity="0"
+            className={`${isLoaded ? "animate-thunder-glow" : ""}`}
+            style={{ animationDelay: "4.2s" }}
+          />
+
+          {/* Gradient Definitions */}
+          <defs>
+            <linearGradient
+              id="thunderGradient"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#60A5FA" stopOpacity="1" />
+              <stop offset="50%" stopColor="#A855F7" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#06B6D4" stopOpacity="0.6" />
+            </linearGradient>
+            <linearGradient
+              id="thunderGradient2"
+              x1="0%"
+              y1="0%"
+              x2="0%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.9" />
+              <stop offset="50%" stopColor="#EF4444" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.5" />
+            </linearGradient>
+            <radialGradient id="thunderGlow">
+              <stop offset="0%" stopColor="#60A5FA" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#60A5FA" stopOpacity="0" />
+            </radialGradient>
+            <radialGradient id="thunderGlow2">
+              <stop offset="0%" stopColor="#F59E0B" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#F59E0B" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Subtle Snowfall Animation */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className={`absolute w-1 h-1 bg-white/20 rounded-full animate-snowfall transition-opacity duration-1000 ${
+              isLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${8 + Math.random() * 4}s`,
+              animationTimingFunction: "linear",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-12 py-8 lg:py-24">
         <div className="lg:hidden w-full max-w-md mx-auto space-y-8">
-          {/* Greeting */}
           <p
             className={`text-gray-400 text-xl font-inter transition-all duration-1000 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -80,7 +169,6 @@ export default function HeroSection() {
             Hi, I'm Stephen
           </p>
 
-          {/* Main Title */}
           <h1
             className={`text-5xl font-bold font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight transition-all duration-1000 ${
               isLoaded
@@ -94,7 +182,6 @@ export default function HeroSection() {
             Developer
           </h1>
 
-          {/* Description */}
           <p
             className={`text-gray-400 text-lg leading-relaxed font-inter transition-all duration-1000 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -105,9 +192,8 @@ export default function HeroSection() {
             digital experiences with modern frontend tools and AI integration
           </p>
 
-          {/* Social Media Icons */}
           <div
-            className={`flex justify-center gap-6 transition-all duration-1000 ${
+            className={`flex justify-center gap-6 transition-all duration-1000 mb-7 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "800ms" }}
@@ -130,11 +216,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Desktop Layout - Two Columns */}
         <div className="hidden lg:flex w-full max-w-7xl mx-auto items-center justify-between gap-16 mt-4">
-          {/* Left Column - Greeting, Title, Social Links */}
           <div className="flex-1 space-y-8">
-            {/* Greeting */}
             <p
               className={`text-gray-400 text-2xl font-inter transition-all duration-1000 ${
                 isLoaded
@@ -146,7 +229,6 @@ export default function HeroSection() {
               Hi, I'm Stephen
             </p>
 
-            {/* Main Title */}
             <h1
               className={`text-6xl xl:text-7xl font-bold font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight transition-all duration-1200 ${
                 isLoaded
@@ -160,7 +242,6 @@ export default function HeroSection() {
               Developer
             </h1>
 
-            {/* Social Media Icons */}
             <div
               className={`flex gap-6 transition-all duration-1000 ${
                 isLoaded
@@ -187,7 +268,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Description */}
           <div className="flex-1 flex items-center">
             <p
               className={`text-gray-400 text-xl xl:text-2xl leading-relaxed font-inter max-w-lg transition-all duration-1000 ${

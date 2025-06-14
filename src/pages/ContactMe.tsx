@@ -72,7 +72,10 @@ export default function ContactMe() {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 relative overflow-hidden">
+    <div
+      id="contact"
+      className="min-h-screen py-18 px-4 relative overflow-hidden"
+    >
       {/* Animated Background SVG Paths */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">
@@ -192,7 +195,6 @@ export default function ContactMe() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left side - Title and Message */}
           <div
             className={`flex flex-col justify-center transition-all duration-1000 transform ${
               isVisible.form
@@ -206,7 +208,6 @@ export default function ContactMe() {
               You bring the vision, I bring the skills.
             </p>
 
-            {/* Animated underline */}
             <div className="relative mt-4">
               <svg
                 className="absolute -bottom-2 left-0"
@@ -242,7 +243,6 @@ export default function ContactMe() {
             </div>
           </div>
 
-          {/* Right side - Contact Form */}
           <div
             id="contact-form"
             className={`relative p-8 rounded-lg shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 transition-all duration-1000 transform ${
@@ -386,7 +386,7 @@ export default function ContactMe() {
                 delay: "0ms",
               },
               {
-                href: "https://linkedin.com/in/stephen-ogunjobi",
+                href: "https://www.linkedin.com/in/stephen-ogunjobi-466ab0312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
                 icon: Linkedin,
                 label: "LinkedIn",
                 delay: "200ms",

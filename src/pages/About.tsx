@@ -55,7 +55,10 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen py-10  px-6 lg:px-12 relative overflow-hidden">
+    <div
+      id="about"
+      className="py-5 lg:min-h-screen lg:py-18 px-6 lg:px-12 relative overflow-hidden"
+    >
       {/* Animated Background SVG Paths */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">
@@ -150,9 +153,27 @@ export default function About() {
         ))}
       </div>
 
+      {/* Enhanced Snowfall with Wind Effect */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={`snow-${i}`}
+            className={`absolute w-1.5 h-1.5 bg-white/30 rounded-full animate-snowfall-wind transition-opacity duration-1500 ${
+              isVisible.paragraph1 ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 8}s`,
+              animationDuration: `${10 + Math.random() * 5}s`,
+              animationTimingFunction: "ease-in-out",
+            }}
+          />
+        ))}
+      </div>
+
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-8">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             About Me
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mb-8 rounded-full"></div>

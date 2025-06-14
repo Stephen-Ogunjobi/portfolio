@@ -1,13 +1,14 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Home, User, FolderOpen, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function AppLayout() {
-  const location = useLocation();
+  const [activeSection, setActiveSection] = useState("home");
 
   const navLinks = [
     {
       name: "Home",
-      path: "/",
+      sectionId: "home",
       icon: Home,
       activeColor: "from-cyan-400 to-blue-500",
       glowColor: "shadow-cyan-500/30",
@@ -15,7 +16,7 @@ export default function AppLayout() {
     },
     {
       name: "About",
-      path: "/about",
+      sectionId: "about",
       icon: User,
       activeColor: "from-emerald-400 to-teal-500",
       glowColor: "shadow-emerald-500/30",
@@ -23,7 +24,7 @@ export default function AppLayout() {
     },
     {
       name: "Projects",
-      path: "/projects",
+      sectionId: "projects",
       icon: FolderOpen,
       activeColor: "from-orange-400 to-pink-500",
       glowColor: "shadow-orange-500/30",
@@ -31,13 +32,48 @@ export default function AppLayout() {
     },
     {
       name: "Contact",
-      path: "/contact",
+      sectionId: "contact",
       icon: Mail,
       activeColor: "from-purple-400 to-pink-500",
       glowColor: "shadow-purple-500/30",
       hoverGlow: "hover:shadow-purple-400/20",
     },
   ];
+
+  // Smooth scroll function
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
+  // Track active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navLinks.map((link) => link.sectionId);
+      let currentSection = "home";
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            currentSection = sectionId;
+          }
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial state
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white font-inter">
@@ -47,7 +83,7 @@ export default function AppLayout() {
           {/* Glass container with enhanced glassmorphism */}
           <div className="relative bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/20 p-2 shadow-2xl">
             {/* Animated glass border glow */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-sm animate-pulse"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20  via-pink-500/20 to-cyan-500/20 blur-sm animate-pulse"></div>
 
             {/* Inner glass reflection */}
             <div className="absolute inset-1 rounded-xl bg-gradient-to-t from-white/5 to-white/20 pointer-events-none"></div>
@@ -56,12 +92,12 @@ export default function AppLayout() {
             <div className="relative flex space-x-2">
               {navLinks.map((link) => {
                 const IconComponent = link.icon;
-                const isActive = location.pathname === link.path;
+                const isActive = activeSection === link.sectionId;
 
                 return (
-                  <Link
+                  <button
                     key={link.name}
-                    to={link.path}
+                    onClick={() => scrollToSection(link.sectionId)}
                     className={`
                       relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-500 flex items-center gap-2 group overflow-hidden
                       ${
@@ -89,7 +125,7 @@ export default function AppLayout() {
                     <span className="relative z-10 font-poppins font-medium tracking-wide text-sm">
                       {link.name}
                     </span>
-                  </Link>
+                  </button>
                 );
               })}
             </div>
@@ -112,12 +148,12 @@ export default function AppLayout() {
             <div className="relative flex justify-around items-center">
               {navLinks.map((link) => {
                 const IconComponent = link.icon;
-                const isActive = location.pathname === link.path;
+                const isActive = activeSection === link.sectionId;
 
                 return (
-                  <Link
+                  <button
                     key={link.name}
-                    to={link.path}
+                    onClick={() => scrollToSection(link.sectionId)}
                     className={`
                       relative flex flex-col items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-500 group
                       ${
@@ -127,7 +163,6 @@ export default function AppLayout() {
                       }
                     `}
                   >
-                    {/* Active state effects for mobile */}
                     {isActive && (
                       <>
                         <div
@@ -153,7 +188,7 @@ export default function AppLayout() {
                     >
                       {link.name}
                     </span>
-                  </Link>
+                  </button>
                 );
               })}
             </div>
@@ -161,7 +196,6 @@ export default function AppLayout() {
         </div>
       </nav>
 
-      {/* Main content area - Adjusted padding for glass navs */}
       <main className="  py-6 px-4  pb-20 md:pb-8 bg-gradient-to-br from-gray-900 via-black to-gray-900">
         <Outlet />
       </main>

@@ -83,11 +83,10 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-12">
+    <section id="projects" className="py-20 px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-3 font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             Projects
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
@@ -95,7 +94,6 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="space-y-20">
           {projects.map((project, index) => (
             <div

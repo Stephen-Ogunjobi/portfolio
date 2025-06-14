@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom animations for navigation */
 @keyframes border-glow {
   0%,
@@ -92,5 +97,137 @@
 @media (hover: none) and (pointer: coarse) {
   .group:active {
     transform: scale(0.95);
+  }
+}
+
+/* Thunder Strike Animation */
+@keyframes thunder-strike {
+  0% {
+    stroke-dashoffset: 400;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.animate-thunder-strike {
+  animation: thunder-strike 1.5s ease-in-out;
+}
+
+/* Thunder Glow Animation */
+@keyframes thunder-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  20% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+  40% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 0.9;
+    transform: scale(1.5);
+  }
+  80% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.animate-thunder-glow {
+  animation: thunder-glow 1s ease-in-out;
+}
+
+/* Snowfall Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall linear infinite;
+}
+
+/* Enhanced snowfall with wind effect */
+@keyframes snowfall-wind {
+  0% {
+    transform: translateY(-100vh) translateX(-20px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(25vh) translateX(20px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-10px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(30px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(100vh) translateX(10px) rotate(360deg);
+  }
+}
+
+.animate-snowfall-wind {
+  animation: snowfall-wind linear infinite;
+}
+
+/* Responsive optimizations for animations */
+@media (max-width: 768px) {
+  .animate-thunder-strike {
+    animation-duration: 1.2s;
+  }
+
+  .animate-snowfall {
+    animation-duration: 6s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-thunder-strike,
+  .animate-thunder-glow,
+  .animate-snowfall,
+  .animate-snowfall-wind {
+    animation: none;
   }
 }

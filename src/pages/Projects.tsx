@@ -64,6 +64,26 @@ export default function Projects() {
     },
     {
       id: 3,
+      title: "TripMate",
+      subtitle: "Travel Planner",
+      description:
+        "A web app that allows users to plan their trips and get recommendations for activities, restaurants, and hotels",
+      image: "tripmate--mockup.jpg",
+      technologies: [
+        "React",
+        "JavaScript",
+        "React-query",
+        "React-router",
+        "React-hook-form",
+        "React-toastify",
+
+        "Tailwind CSS",
+      ],
+      liveUrl: "https://tripmate-e24v.vercel.app/",
+      githubUrl: "https://github.com/Stephen-Ogunjobi/TripMate",
+    },
+    {
+      id: 4,
       title: "ExamPrep",
       subtitle: "Exam  and Study Management System",
       description:

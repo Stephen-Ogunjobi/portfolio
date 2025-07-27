@@ -46,6 +46,17 @@ export default function Projects() {
     },
     {
       id: 2,
+      title: "Spree",
+      subtitle: "Income tracker and manager",
+      description:
+        "A landing page for a startup that allows users get familiar with the product and download the app",
+      image: "spree-mockup.jpg",
+      technologies: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Vue-icons"],
+      liveUrl: "https://paywave.com",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 3,
       title: "Plated",
       subtitle: "Recipe and Meals Finder",
       description:
@@ -63,7 +74,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/Plated",
     },
     {
-      id: 3,
+      id: 4,
       title: "TripMate",
       subtitle: "Travel Planner",
       description:
@@ -83,7 +94,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/TripMate",
     },
     {
-      id: 4,
+      id: 5,
       title: "ExamPrep",
       subtitle: "Exam  and Study Management System",
       description:

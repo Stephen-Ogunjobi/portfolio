@@ -34,12 +34,16 @@ export default function Projects() {
         "A web app  that allows you to create a professional resume/CV and cover letter in minutes. It uses AI to generate a resume based on your skills and experience.",
       image: "finez-tab-mockup.jpg",
       technologies: [
+        "Next.js",
         "React",
         "TypeScript",
         "Tailwind CSS",
+        "AI-Integration",
         "React-hook-form",
-        "Next",
         "RTK Query",
+        "Stripe",
+        "HTML",
+        "CSS",
       ],
       liveUrl: "https://finezcv.com",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
@@ -57,6 +61,26 @@ export default function Projects() {
     },
     {
       id: 3,
+      title: "GlowCart",
+      subtitle: "E-commerce Skin care store",
+      description:
+        "A web app that allows users to browse and purchase skin care products",
+      image: "glowcart-mockup.jpg",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Zustand",
+        "React-hook-form",
+        "Tailwind CSS",
+        "Zod",
+        "Supabase",
+      ],
+      liveUrl: "https://glowcart-pi.vercel.app/",
+      githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
+    },
+    {
+      id: 4,
       title: "Plated",
       subtitle: "Recipe and Meals Finder",
       description:
@@ -74,7 +98,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/Plated",
     },
     {
-      id: 4,
+      id: 5,
       title: "TripMate",
       subtitle: "Travel Planner",
       description:
@@ -94,7 +118,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/TripMate",
     },
     {
-      id: 5,
+      id: 6,
       title: "ExamPrep",
       subtitle: "Exam  and Study Management System",
       description:

@@ -53,10 +53,10 @@ export default function Projects() {
       title: "Spree",
       subtitle: "Income tracker and manager",
       description:
-        "A landing page for a startup that allows users get familiar with the product and download the app",
+        "Landing page website for a startup that allows users get familiar with the product and download the app",
       image: "spree-mockup.jpg",
       technologies: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Vue-icons"],
-      liveUrl: "https://paywave.com",
+      liveUrl: "https://paywave.tech",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
@@ -81,6 +81,46 @@ export default function Projects() {
     },
     {
       id: 4,
+      title: "GlowCart-Admin",
+      subtitle: "Admin Dasboard for GlowCart",
+      description:
+        "A comprehensive E-commerce admin dashboard, that allows store administrator to manage products, handle orders, manage users and content, view analytics and inventory.",
+      image: "glowcart-admin-mockup.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Supabase",
+        "React-hook-form",
+        "Zod",
+        "React-markdown",
+        "Slugify",
+      ],
+      liveUrl: "https://glowcart-admin-x89n.vercel.app/admin/home",
+      githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
+    },
+
+    {
+      id: 5,
+      title: "ExamPrep",
+      subtitle: "Exam  and Study Management System",
+      description:
+        "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
+      image: "examPrep-mockup.png",
+      technologies: [
+        "React",
+        "Next",
+        "Typescript",
+        "Supabase",
+        "Tailwind CSS",
+        "AI-Chatbot",
+      ],
+      liveUrl: "https://exam-app-five-neon.vercel.app/",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 6,
       title: "Plated",
       subtitle: "Recipe and Meals Finder",
       description:
@@ -98,7 +138,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/Plated",
     },
     {
-      id: 5,
+      id: 7,
       title: "TripMate",
       subtitle: "Travel Planner",
       description:
@@ -116,24 +156,6 @@ export default function Projects() {
       ],
       liveUrl: "https://tripmate-e24v.vercel.app/",
       githubUrl: "https://github.com/Stephen-Ogunjobi/TripMate",
-    },
-    {
-      id: 6,
-      title: "ExamPrep",
-      subtitle: "Exam  and Study Management System",
-      description:
-        "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
-      image: "examPrep-mockup.png",
-      technologies: [
-        "React",
-        "Next",
-        "Typescript",
-        "Supabase",
-        "Tailwind CSS",
-        "AI-Chatbot",
-      ],
-      liveUrl: "https://github.com/Stephen-Ogunjobi",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
   ];
 

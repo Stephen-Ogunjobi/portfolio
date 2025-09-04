@@ -28,8 +28,26 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "ExamPrep",
+      subtitle: "Exam  and Study Management System",
+      description:
+        "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
+      image: "examPrep-mockup.png",
+      technologies: [
+        "React",
+        "Next",
+        "Typescript",
+        "Supabase",
+        "Tailwind CSS",
+        "AI-Chatbot",
+      ],
+      liveUrl: "https://exam-app-five-neon.vercel.app/",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 2,
       title: "FinezCV",
-      subtitle: "AI Powered Resume Builder",
+      subtitle: "AI Powered Resume and cover letter Builder",
       description:
         "A web app  that allows you to create a professional resume/CV and cover letter in minutes. It uses AI to generate a resume based on your skills and experience.",
       image: "finez-tab-mockup.jpg",
@@ -49,7 +67,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
-      id: 2,
+      id: 3,
       title: "Spree",
       subtitle: "Income tracker and manager",
       description:
@@ -60,7 +78,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
-      id: 3,
+      id: 4,
       title: "GlowCart",
       subtitle: "E-commerce Skin care store",
       description:
@@ -80,7 +98,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
     },
     {
-      id: 4,
+      id: 5,
       title: "GlowCart-Admin",
       subtitle: "Admin Dasboard for GlowCart",
       description:
@@ -101,24 +119,6 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
     },
 
-    {
-      id: 5,
-      title: "ExamPrep",
-      subtitle: "Exam  and Study Management System",
-      description:
-        "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
-      image: "examPrep-mockup.png",
-      technologies: [
-        "React",
-        "Next",
-        "Typescript",
-        "Supabase",
-        "Tailwind CSS",
-        "AI-Chatbot",
-      ],
-      liveUrl: "https://exam-app-five-neon.vercel.app/",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
-    },
     {
       id: 6,
       title: "Plated",

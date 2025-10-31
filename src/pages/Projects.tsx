@@ -41,7 +41,7 @@ export default function Projects() {
         "Tailwind CSS",
         "AI-Chatbot",
       ],
-      liveUrl: "https://exam-app-five-neon.vercel.app/",
+      liveUrl: "https://aiprep.ng/",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {

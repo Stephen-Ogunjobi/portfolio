@@ -1,15 +1,16 @@
 import {
-  SiVuedotjs,
   SiReact,
   SiTypescript,
   SiTailwindcss,
   SiNextdotjs,
-  SiHtml5,
-  SiCss3,
   SiJavascript,
   SiGit,
   SiSupabase,
-  SiGnubash,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
 } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTiktok } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -49,17 +50,18 @@ export default function HeroSection() {
   ];
 
   const techStack = [
-    { name: "Vue", icon: SiVuedotjs, color: "text-green-500" },
     { name: "React", icon: SiReact, color: "text-blue-400" },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
     { name: "TailwindCSS", icon: SiTailwindcss, color: "text-cyan-400" },
     { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
-    { name: "HTML5", icon: SiHtml5, color: "text-orange-600" },
-    { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
     { name: "Git", icon: SiGit, color: "text-orange-500" },
     { name: "Supabase", icon: SiSupabase, color: "text-green-400" },
-    { name: "Bash", icon: SiGnubash, color: "text-gray-300" },
+    { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+    { name: "Express", icon: SiExpress, color: "text-gray-300" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-500" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
+    { name: "Prisma", icon: SiPrisma, color: "text-cyan-300" },
   ];
 
   const duplicatedTechStack = [...techStack, ...techStack];
@@ -177,7 +179,7 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            Frontend
+            Full-Stack
             <br />
             Developer
           </h1>
@@ -188,8 +190,9 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: "600ms" }}
           >
-            Transforming ideas into functional, user friendly and seamless
-            digital experiences with modern frontend tools and AI integration
+            Building complete web solutions from frontend to backend, creating
+            seamless full-stack applications with modern technologies and AI
+            integration
           </p>
 
           <div
@@ -237,7 +240,7 @@ export default function HeroSection() {
               }`}
               style={{ transitionDelay: "400ms" }}
             >
-              Frontend
+              Full-Stack
               <br />
               Developer
             </h1>
@@ -277,8 +280,9 @@ export default function HeroSection() {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              Transforming ideas into functional, user friendly and seamless
-              digital experiences with modern frontend tools and AI integration
+              Building complete web solutions from frontend to backend, creating
+              seamless full-stack applications with modern technologies and AI
+              integration
             </p>
           </div>
         </div>

@@ -28,6 +28,31 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Resume-Rankr",
+      subtitle:
+        "AI-Powered Job Search Platform with Real-Time Interview Intelligence",
+      description:
+        "Full-stack SaaS platform combining AI resume analysis, interactive resume builder, HeyGen avatar-based mock interviews, and Chrome extension interview copilot with live transcription. Features Stripe subscriptions, Supabase authentication with RLS, multilingual support (100+ languages), and rate-limited serverless APIs.",
+      image: "resumerankr-mockup.png",
+      technologies: [
+        "Next.js 15",
+        "TypeScript",
+        "Supabase",
+        "OpenAI API",
+        "Google Gemini",
+        "HeyGen Streaming Avatar",
+        "Stripe",
+        "Web Speech API",
+        "Upstash Redis",
+        "Framer Motion",
+        "Tailwind CSS",
+        "Chrome Extension API",
+      ],
+      liveUrl: "https://resume-rankr.com/",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 2,
       title: "ExamPrep",
       subtitle: "Exam  and Study Management System",
       description:
@@ -44,28 +69,28 @@ export default function Projects() {
       liveUrl: "https://aiprep.ng/",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
-    {
-      id: 2,
-      title: "FinezCV",
-      subtitle: "AI Powered Resume and cover letter Builder",
-      description:
-        "A web app  that allows you to create a professional resume/CV and cover letter in minutes. It uses AI to generate a resume based on your skills and experience.",
-      image: "finez-tab-mockup.jpg",
-      technologies: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "AI-Integration",
-        "React-hook-form",
-        "RTK Query",
-        "Stripe",
-        "HTML",
-        "CSS",
-      ],
-      liveUrl: "https://finezcv.com",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
-    },
+    // {
+    //   id: 2,
+    //   title: "FinezCV",
+    //   subtitle: "AI Powered Resume and cover letter Builder",
+    //   description:
+    //     "A web app  that allows you to create a professional resume/CV and cover letter in minutes. It uses AI to generate a resume based on your skills and experience.",
+    //   image: "finez-tab-mockup.jpg",
+    //   technologies: [
+    //     "Next.js",
+    //     "React",
+    //     "TypeScript",
+    //     "Tailwind CSS",
+    //     "AI-Integration",
+    //     "React-hook-form",
+    //     "RTK Query",
+    //     "Stripe",
+    //     "HTML",
+    //     "CSS",
+    //   ],
+    //   liveUrl: "https://finezcv.com",
+    //   githubUrl: "https://github.com/Stephen-Ogunjobi",
+    // },
     {
       id: 3,
       title: "Spree",

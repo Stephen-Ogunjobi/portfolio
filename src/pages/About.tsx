@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Code, Settings, Bot } from "lucide-react";
+import { Code, Settings, Database } from "lucide-react";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState({
@@ -39,17 +39,17 @@ export default function About() {
       gradient: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Backend Integration",
+      title: "Backend Development",
       description:
-        "Architecting robust backend solutions and seamless API integrations for scalable applications.",
+        "Building scalable server-side applications, RESTful APIs, and implementing authentication, authorization, and business logic.",
       icon: Settings,
       gradient: "from-purple-500 to-pink-500",
     },
     {
-      title: "AI Integration",
+      title: "Database Design",
       description:
-        "Implementing intelligent AI-powered features and chatbots to revolutionize user experiences.",
-      icon: Bot,
+        "Designing efficient database schemas, optimizing queries, and managing data.",
+      icon: Database,
       gradient: "from-emerald-500 to-teal-500",
     },
   ];
@@ -222,14 +222,12 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            I'm a frontend developer with over a year of experience building
-            modern web applications using React, TypeScript, Tailwind, Next.js,
-            and Supabase. I enjoy creating seamless user experiences and working
-            on backend features.
+            I discovered coding by trying to fix a real problem and realized I
+            could build solutions instead of waiting for them.
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-16 space-y-6">
           <p
             id="paragraph2"
             className={`text-lg text-gray-500 text-center max-w-4xl mx-auto leading-relaxed transition-all duration-1000 transform ${
@@ -239,10 +237,35 @@ export default function About() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            I've integrated AI into projects like real-time chatbots and CV
-            builders. I enjoy learning new technologies and contributing to
-            projects. Resilient, creative, and fast on my feet. I bring both
-            tech skills and problem-solving energy to every project.
+            I'm a full-stack developer who builds fast, scalable web
+            applications using React, TypeScript, Next.js, and Node.js with
+            PostgreSQL and MongoDB. In the past two years, I've taken products
+            from idea to production, scaled platforms to thousands of users, and
+            optimized performance where it mattered most.
+          </p>
+
+          <p
+            className={`text-lg text-gray-500 text-center max-w-4xl mx-auto leading-relaxed transition-all duration-1000 transform ${
+              isVisible.paragraph2
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "400ms" }}
+          >
+            I care deeply about building products people enjoy using — not just
+            clean code, but real impact.
+          </p>
+
+          <p
+            className={`text-lg text-gray-500 text-center max-w-4xl mx-auto leading-relaxed transition-all duration-1000 transform ${
+              isVisible.paragraph2
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "600ms" }}
+          >
+            Outside of coding, you'll find me reading or experimenting in the
+            kitchen.
           </p>
         </div>
 

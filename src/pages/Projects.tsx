@@ -57,7 +57,7 @@ export default function Projects() {
       subtitle: "Exam  and Study Management System",
       description:
         "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
-      image: "examPrep-mockup.png",
+      image: "Examprep.png",
       technologies: [
         "React",
         "Next",
@@ -91,8 +91,27 @@ export default function Projects() {
     //   liveUrl: "https://finezcv.com",
     //   githubUrl: "https://github.com/Stephen-Ogunjobi",
     // },
+
     {
       id: 3,
+      title: "Matchlance",
+      subtitle: "Matching freelancers with clients",
+      description:
+        "A two-sided marketplace connecting clients and freelancers through smart job matching, proposals, and real-time messaging.",
+      image: "matchlance.png",
+      technologies: [
+        "NodeJs",
+        "Express",
+        "MongoDb",
+        "Redis",
+        "WebSocket",
+        "React",
+      ],
+      liveUrl: "https://matchlance-frontend-d1rx.vercel.app",
+      githubUrl: "https://github.com/Stephen-Ogunjobi/matchlance-backend.git",
+    },
+    {
+      id: 4,
       title: "Spree",
       subtitle: "Income tracker and manager",
       description:
@@ -103,7 +122,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
-      id: 4,
+      id: 5,
       title: "GlowCart",
       subtitle: "E-commerce Skin care store",
       description:
@@ -123,7 +142,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
     },
     {
-      id: 5,
+      id: 6,
       title: "GlowCart-Admin",
       subtitle: "Admin Dasboard for GlowCart",
       description:
@@ -145,7 +164,7 @@ export default function Projects() {
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Plated",
       subtitle: "Recipe and Meals Finder",
       description:
@@ -163,7 +182,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/Plated",
     },
     {
-      id: 7,
+      id: 8,
       title: "TripMate",
       subtitle: "Travel Planner",
       description:
@@ -204,8 +223,8 @@ export default function Projects() {
                 visibleProjects.includes(index)
                   ? "opacity-100 translate-x-0"
                   : index % 2 === 0
-                  ? "opacity-0 -translate-x-12"
-                  : "opacity-0 translate-x-12"
+                    ? "opacity-0 -translate-x-12"
+                    : "opacity-0 translate-x-12"
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >

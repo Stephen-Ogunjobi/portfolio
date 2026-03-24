@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Code, Settings, Database } from "lucide-react";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState({
@@ -29,30 +28,6 @@ export default function About() {
     handleScroll(); // Check initial state
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const aboutItems = [
-    {
-      title: "Frontend Development",
-      description:
-        "Building responsive and interactive user interfaces with modern frameworks and cutting-edge technologies.",
-      icon: Code,
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "Backend Development",
-      description:
-        "Building scalable server-side applications, RESTful APIs, and implementing authentication, authorization, and business logic.",
-      icon: Settings,
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      title: "Database Design",
-      description:
-        "Designing efficient database schemas, optimizing queries, and managing data.",
-      icon: Database,
-      gradient: "from-emerald-500 to-teal-500",
-    },
-  ];
 
   return (
     <div
@@ -237,11 +212,17 @@ export default function About() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            I'm a full-stack developer who builds fast, scalable web
-            applications using React, TypeScript, Next.js, and Node.js with
-            PostgreSQL and MongoDB. In the past two years, I've taken products
-            from idea to production, scaled platforms to thousands of users, and
-            optimized performance where it mattered most.
+            I’ve worked on fintech and AI-driven SaaS products, contributing to
+            both new builds and production systems under load. On the backend, I
+            have re-architected ingestion flows with Kafka to remove API
+            bottlenecks, reduced a MongoDB aggregation through indexing fixes,
+            and introduced structured error handling that surfaced silent
+            production failures. On the frontend, I have cleaned up a large
+            Next.js/React TypeScript codebase with performance debt by
+            optimizing and simplifying component structure, reducing page load
+            time by 40%. I focus on building systems that are reliable behind
+            the scenes and straightforward for both users and engineers to work
+            with.
           </p>
 
           <p
@@ -252,8 +233,11 @@ export default function About() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            I care deeply about building products people enjoy using — not just
-            clean code, but real impact.
+            I work across the full stack React, Next.js, TypeScript on the
+            frontend. Node.js, Express, NestJS on the backend. PostgreSQL and
+            MongoDB for data. But the stack is secondary. What I actually care
+            about is whether the thing works, scales, and makes sense to the
+            person using it.
           </p>
 
           <p
@@ -264,8 +248,8 @@ export default function About() {
             }`}
             style={{ transitionDelay: "600ms" }}
           >
-            Outside of coding, you'll find me reading or experimenting in the
-            kitchen.
+            Outside of engineering, you'll find me reading or experimenting in
+            the kitchen.
           </p>
         </div>
 
@@ -306,55 +290,6 @@ export default function About() {
               </linearGradient>
             </defs>
           </svg>
-
-          <div
-            id="grid"
-            className={`grid md:grid-cols-3 gap-8 lg:gap-12 transition-all duration-1000 transform ${
-              isVisible.grid
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-12"
-            }`}
-          >
-            {aboutItems.map((item, index) => {
-              const IconComponent = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="group relative rounded-2xl p-8 backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/30 transition-all duration-500 hover:transform hover:-translate-y-3 overflow-hidden"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {/* Animated background glow */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}
-                  ></div>
-
-                  {/* Animated border glow */}
-                  <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-500 -z-10`}
-                  ></div>
-
-                  {/* Icon with gradient background */}
-                  <div
-                    className={`w-16 h-16 mx-auto mb-6 rounded-xl bg-gradient-to-r ${item.gradient} p-0.5 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-gray-700" />
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold mb-4 text-center text-gray-600 group-hover:text-gray-300 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-400 text-center leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                    {item.description}
-                  </p>
-
-                  {/* Subtle particle effect */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
 

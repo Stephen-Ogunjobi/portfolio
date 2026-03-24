@@ -32,21 +32,18 @@ export default function Projects() {
       subtitle:
         "AI-Powered Job Search Platform with Real-Time Interview Intelligence",
       description:
-        "Full-stack SaaS platform combining AI resume analysis, interactive resume builder, HeyGen avatar-based mock interviews, and Chrome extension interview copilot with live transcription. Features Stripe subscriptions, Supabase authentication with RLS, multilingual support (100+ languages), and rate-limited serverless APIs.",
+        "Resume analysis, interactive resume builder, HeyGen avatar mock interviews, and a Chrome extension that transcribes live interviews  all in one SaaS platform.",
       image: "resumerankr-mockup.png",
       technologies: [
-        "Next.js 15",
+        "Next.js",
         "TypeScript",
         "Supabase",
         "OpenAI API",
-        "Google Gemini",
-        "HeyGen Streaming Avatar",
+        "WebSockets",
         "Stripe",
         "Web Speech API",
         "Upstash Redis",
         "Framer Motion",
-        "Tailwind CSS",
-        "Chrome Extension API",
       ],
       liveUrl: "https://resume-rankr.com/",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
@@ -54,9 +51,9 @@ export default function Projects() {
     {
       id: 2,
       title: "ExamPrep",
-      subtitle: "Exam  and Study Management System",
+      subtitle: "Exam and Study Management System",
       description:
-        "A web app that contains everything needed to get student ready for both online and offline exams, with AI assistant for better understanding",
+        "EdTech SaaS with 15,000+ questions across multiple subjects, AI-powered explanations that adapt to each student's mistake pattern, and a CBT simulation platform with real-time timing. Currently serving 2,000+ active students.",
       image: "Examprep.png",
       technologies: [
         "React",
@@ -97,7 +94,7 @@ export default function Projects() {
       title: "Matchlance",
       subtitle: "Matching freelancers with clients",
       description:
-        "A two-sided marketplace connecting clients and freelancers through smart job matching, proposals, and real-time messaging.",
+        "A two sided marketplace connecting freelancers with clients through smart job matching, proposals, and real-time messaging. Built with secure authentication, MongoDB with optimized indexing for fast job searches, Redis caching to reduce database load, and WebSocket-powered instant messaging",
       image: "matchlance.png",
       technologies: [
         "NodeJs",
@@ -115,9 +112,19 @@ export default function Projects() {
       title: "Spree",
       subtitle: "Income tracker and manager",
       description:
-        "Landing page website for a startup that allows users get familiar with the product and download the app",
+        "Fintech mobile app enabling virtual account creation, real-time transaction tracking, and secure payment workflows. Built React Native screens for transaction monitoring and income management, with REST and GraphQL APIs handling virtual accounts and payment operations using ACID-compliant transactions and idempotency safeguards. The accompanying landing page, built with Vue.js and Nuxt.js, drives app downloads through SEO-optimized performance.",
       image: "spree-mockup.jpg",
-      technologies: ["Nuxt.js", "Vue.js", "Tailwind CSS", "Vue-icons"],
+      technologies: [
+        "Node",
+        "Express",
+        "Postgres",
+        "React Native",
+        "Expo",
+        "Vue.js",
+        "Tailwind CSS",
+        "Nuxt.js",
+        "Vue-icons",
+      ],
       liveUrl: "https://paywave.tech",
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
@@ -126,7 +133,7 @@ export default function Projects() {
       title: "GlowCart",
       subtitle: "E-commerce Skin care store",
       description:
-        "A web app that allows users to browse and purchase skin care products",
+        "E-commerce web app for browsing and purchasing skin care products",
       image: "glowcart-mockup.jpg",
       technologies: [
         "Next.js",

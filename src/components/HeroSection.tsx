@@ -11,6 +11,7 @@ import {
   SiPostgresql,
   SiMongodb,
   SiPrisma,
+  SiNestjs,
 } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTiktok } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -62,6 +63,7 @@ export default function HeroSection() {
     { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-500" },
     { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
     { name: "Prisma", icon: SiPrisma, color: "text-cyan-300" },
+    { name: "NestJS", icon: SiNestjs, color: "text-red-500" },
   ];
 
   const duplicatedTechStack = [...techStack, ...techStack];
@@ -181,7 +183,7 @@ export default function HeroSection() {
           >
             Full-Stack
             <br />
-            Developer
+            Engineer
           </h1>
 
           <p
@@ -242,7 +244,7 @@ export default function HeroSection() {
             >
               Full-Stack
               <br />
-              Developer
+              Engineer
             </h1>
 
             <div
@@ -280,9 +282,9 @@ export default function HeroSection() {
               }`}
               style={{ transitionDelay: "600ms" }}
             >
-              Building complete web solutions from frontend to backend, creating
-              seamless full-stack applications with modern technologies and AI
-              integration
+              I build and design production grade software from system
+              architecture and data modeling to deployed user experience that
+              people actually pay for.
             </p>
           </div>
         </div>

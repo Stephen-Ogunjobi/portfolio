@@ -62,7 +62,7 @@ export default function ContactMe() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -386,7 +386,7 @@ export default function ContactMe() {
                 delay: "0ms",
               },
               {
-                href: "https://www.linkedin.com/in/stephen-ogunjobi-466ab0312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+                href: "www.linkedin.com/in/stephen-ogunjobi-367aba368",
                 icon: Linkedin,
                 label: "LinkedIn",
                 delay: "200ms",

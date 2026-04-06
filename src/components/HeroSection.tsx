@@ -33,7 +33,7 @@ export default function HeroSection() {
     {
       name: "LinkedIn",
       icon: FaLinkedin,
-      url: "https://www.linkedin.com/in/stephen-ogunjobi-466ab0312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      url: "www.linkedin.com/in/stephen-ogunjobi-367aba368",
       color: "hover:text-blue-400",
     },
     {

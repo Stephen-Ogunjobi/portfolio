@@ -28,6 +28,29 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "OnadaPrep",
+      subtitle: "Real-Time EdTech & Tutoring Infrastructure Platform",
+      description:
+        "SaaS platform that supports real-time 1-on-1 and group tutoring sessions, redis backed distributed webscoket notifications, recurring subscription billing, and RBAC across students, tutors, contributors and administrators.",
+      image: "onadaprep-mockup.png",
+      technologies: [
+        "NestJs",
+        "PostgresSQL",
+        "Redis",
+        "BullMQ",
+        "Socket.IO",
+        "Next.js",
+        "AWS",
+        "LiveKit",
+        "Docker",
+        "OpenAI API",
+        "Paystack",
+      ],
+      liveUrl: "https://onadaprep.com",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 2,
       title: "Resume-Rankr",
       subtitle:
         "AI-Powered Job Search Platform with Real-Time Interview Intelligence",
@@ -49,7 +72,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
-      id: 2,
+      id: 3,
       title: "ExamPrep",
       subtitle: "Exam and Study Management System",
       description:
@@ -90,7 +113,7 @@ export default function Projects() {
     // },
 
     {
-      id: 3,
+      id: 4,
       title: "Matchlance",
       subtitle: "Matching freelancers with clients",
       description:
@@ -108,7 +131,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/matchlance-backend.git",
     },
     {
-      id: 4,
+      id: 5,
       title: "Spree",
       subtitle: "Income tracker and manager",
       description:
@@ -129,7 +152,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
-      id: 5,
+      id: 6,
       title: "GlowCart",
       subtitle: "E-commerce Skin care store",
       description:
@@ -149,7 +172,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/GlowCart",
     },
     {
-      id: 6,
+      id: 7,
       title: "GlowCart-Admin",
       subtitle: "Admin Dasboard for GlowCart",
       description:
@@ -171,7 +194,7 @@ export default function Projects() {
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Plated",
       subtitle: "Recipe and Meals Finder",
       description:
@@ -189,7 +212,7 @@ export default function Projects() {
       githubUrl: "https://github.com/Stephen-Ogunjobi/Plated",
     },
     {
-      id: 8,
+      id: 9,
       title: "TripMate",
       subtitle: "Travel Planner",
       description:

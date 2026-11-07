@@ -213,8 +213,8 @@ export default function About() {
             style={{ transitionDelay: "200ms" }}
           >
             I’ve worked across fintech, edtech, healthtech, creator tech and
-            AI-driven SaaS, on both brand-new products and live systems that
-            businesses depend on every day. I care about results people can see:
+            AI-driven SaaS, from consumer apps to enterprise B2B platforms used
+            by banks and large organizations. I care about results people can see:
             rebuilding a company’s website grew its visitors by 40% and its
             online sales by 15% in two months, and reworking a payment system
             cut failed transactions by more than 30%. I especially enjoy working

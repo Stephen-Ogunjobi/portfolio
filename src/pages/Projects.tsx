@@ -27,6 +27,48 @@ export default function Projects() {
 
   const projects = [
     {
+      id: 11,
+      title: "Avant One",
+      subtitle:
+        "Multi-Tenant B2B SaaS: Background Checks & Risk, HR, Hiring, CRM, Support and Training",
+      description:
+        "One secure platform where organizations manage their people, customers and risk, with each company's data kept fully isolated. Used by 340+ organizations, including tier-1 banks, with AI-powered triage handling 430k+ support cases across 15 channels.",
+      image: "avantone-mockup.png",
+      technologies: [
+        "TypeScript",
+        "PostgreSQL",
+        "Row-Level Security",
+        "Serverless Functions",
+        "Gemini AI",
+        "Paystack",
+        "Flutterwave",
+        "Zoho Sign",
+        "Playwright",
+      ],
+      liveUrl: "https://avantone.io",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
+      id: 10,
+      title: "Playridot",
+      subtitle: "Africa's Talent Discovery Platform",
+      description:
+        "Marketplace connecting African athletes with scouts worldwide. Athletes upload video highlights, verified scouts discover talent by sport and region and chat directly, and AI turns match footage into scouting reports.",
+      image: "playridot-mockup.png",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Edge Functions",
+        "Vercel",
+        "Bunny Stream",
+        "Capacitor",
+        "Multimodal AI",
+      ],
+      liveUrl: "https://playridot.com",
+      githubUrl: "https://github.com/Stephen-Ogunjobi",
+    },
+    {
       id: 1,
       title: "OnadaPrep",
       subtitle: "Real-Time EdTech & Tutoring Infrastructure Platform",
@@ -241,7 +283,7 @@ export default function Projects() {
             Projects
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            A selection of projects I've worked on recently
+            A selection of projects I've built or contributed to
           </p>
         </div>
 

@@ -174,7 +174,7 @@ export default function HeroSection() {
           </p>
 
           <h1
-            className={`text-5xl font-bold font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight transition-all duration-1000 ${
+            className={`text-5xl font-bold font-poppins bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent leading-tight transition-all duration-1000 ${
               isLoaded
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"
@@ -235,7 +235,7 @@ export default function HeroSection() {
             </p>
 
             <h1
-              className={`text-6xl xl:text-7xl font-bold font-poppins bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight transition-all duration-1200 ${
+              className={`text-6xl xl:text-7xl font-bold font-poppins bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent leading-tight transition-all duration-1200 ${
                 isLoaded
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 -translate-x-16"

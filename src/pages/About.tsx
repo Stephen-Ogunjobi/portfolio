@@ -212,17 +212,15 @@ export default function About() {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            I’ve worked on fintech and AI-driven SaaS products, contributing to
-            both new builds and production systems under load. On the backend, I
-            have re-architected ingestion flows with Kafka to remove API
-            bottlenecks, reduced a MongoDB aggregation through indexing fixes,
-            and introduced structured error handling that surfaced silent
-            production failures. On the frontend, I have cleaned up a large
-            Next.js/React TypeScript codebase with performance debt by
-            optimizing and simplifying component structure, reducing page load
-            time by 40%. I focus on building systems that are reliable behind
-            the scenes and straightforward for both users and engineers to work
-            with.
+            I’ve worked across fintech, edtech, healthtech, creator tech and
+            AI-driven SaaS, on both brand-new products and live systems that
+            businesses depend on every day. I care about results people can see:
+            rebuilding a company’s website grew its visitors by 40% and its
+            online sales by 15% in two months, and reworking a payment system
+            cut failed transactions by more than 30%. I especially enjoy working
+            with startup founders, helping turn an early idea into a real
+            product people can sign up for, use and pay for, built to keep
+            working quietly behind the scenes.
           </p>
 
           <p
@@ -233,9 +231,10 @@ export default function About() {
             }`}
             style={{ transitionDelay: "400ms" }}
           >
-            I work across the full stack React, Next.js, TypeScript on the
-            frontend. Node.js, Express, NestJS on the backend. PostgreSQL and
-            MongoDB for data. But the stack is secondary. What I actually care
+            I work across the full stack: React, Next.js, React Native and
+            TypeScript on the frontend; Node.js, NestJS and Express on the
+            backend; PostgreSQL, Supabase, MongoDB and Redis for data; AWS and
+            Docker to ship it. But the stack is secondary. What I actually care
             about is whether the thing works, scales, and makes sense to the
             person using it.
           </p>
@@ -248,8 +247,7 @@ export default function About() {
             }`}
             style={{ transitionDelay: "600ms" }}
           >
-            Outside of engineering, you'll find me reading or experimenting in
-            the kitchen.
+            Outside of engineering, you'll find me reading or in the kitchen.
           </p>
         </div>
 

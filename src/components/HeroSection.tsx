@@ -14,6 +14,7 @@ import {
   SiNestjs,
 } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTiktok } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
@@ -23,6 +24,16 @@ export default function HeroSection() {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const ctaClassName =
+    "group inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold font-poppins text-gray-950 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg shadow-cyan-500/20 hover:shadow-emerald-400/40 hover:scale-105 active:scale-95 transition-all duration-300";
   const socialLinks = [
     {
       name: "GitHub",
@@ -45,7 +56,7 @@ export default function HeroSection() {
     {
       name: "TikTok",
       icon: FaTiktok,
-      url: "https://tiktok.com/@successful.codes",
+      url: "https://tiktok.com/@stephen_successful",
       color: "hover:text-pink-400",
     },
   ];
@@ -198,6 +209,18 @@ export default function HeroSection() {
           </p>
 
           <div
+            className={`flex justify-center transition-all duration-1000 ${
+              isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "700ms" }}
+          >
+            <a href="#contact" onClick={scrollToContact} className={ctaClassName}>
+              Let's work together
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          </div>
+
+          <div
             className={`flex justify-center gap-6 transition-all duration-1000 mb-7 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
@@ -246,6 +269,24 @@ export default function HeroSection() {
               <br />
               Engineer
             </h1>
+
+            <div
+              className={`transition-all duration-1000 ${
+                isLoaded
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-8"
+              }`}
+              style={{ transitionDelay: "700ms" }}
+            >
+              <a
+                href="#contact"
+                onClick={scrollToContact}
+                className={ctaClassName}
+              >
+                Let's work together
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+            </div>
 
             <div
               className={`flex gap-6 transition-all duration-1000 ${

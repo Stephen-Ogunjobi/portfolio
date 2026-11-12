@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Lock } from "lucide-react";
 
 export default function Projects() {
   const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
@@ -46,7 +46,6 @@ export default function Projects() {
         "Playwright",
       ],
       liveUrl: "https://avantone.io",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
       id: 10,
@@ -66,7 +65,6 @@ export default function Projects() {
         "Multimodal AI",
       ],
       liveUrl: "https://playridot.com",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
       id: 1,
@@ -89,7 +87,6 @@ export default function Projects() {
         "Paystack",
       ],
       liveUrl: "https://onadaprep.com",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
       id: 2,
@@ -111,7 +108,6 @@ export default function Projects() {
         "Framer Motion",
       ],
       liveUrl: "https://resume-rankr.com/",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
       id: 3,
@@ -129,7 +125,6 @@ export default function Projects() {
         "AI-Chatbot",
       ],
       liveUrl: "https://aiprep.ng/",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     // {
     //   id: 2,
@@ -191,7 +186,6 @@ export default function Projects() {
         "Vue-icons",
       ],
       liveUrl: "https://paywave.tech",
-      githubUrl: "https://github.com/Stephen-Ogunjobi",
     },
     {
       id: 6,
@@ -342,15 +336,17 @@ export default function Projects() {
                     >
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 sm:p-3 bg-white/95 backdrop-blur-md rounded-xl hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/20"
-                      aria-label="View GitHub Repository"
-                    >
-                      <Github className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 sm:p-3 bg-white/95 backdrop-blur-md rounded-xl hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl border border-white/20"
+                        aria-label="View GitHub Repository"
+                      >
+                        <Github className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
+                      </a>
+                    )}
                   </div>
 
                   {/* Project number indicator */}
@@ -403,15 +399,22 @@ export default function Projects() {
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-gray-200 rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300 border border-white/20 font-medium"
-                    >
-                      <Github className="w-4 h-4" />
-                      View Code
-                    </a>
+                    {project.githubUrl ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-gray-200 rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300 border border-white/20 font-medium"
+                      >
+                        <Github className="w-4 h-4" />
+                        View Code
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-2 sm:py-3 text-gray-500 text-sm font-medium">
+                        <Lock className="w-4 h-4" />
+                        Private codebase
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

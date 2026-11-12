@@ -13,7 +13,7 @@ import {
   SiPrisma,
   SiNestjs,
 } from "react-icons/si";
-import { FaGithub, FaLinkedin, FaEnvelope, FaTiktok } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaTiktok } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -41,12 +41,13 @@ export default function HeroSection() {
       url: "https://github.com/stephen-ogunjobi",
       color: "hover:text-gray-300",
     },
-    {
-      name: "LinkedIn",
-      icon: FaLinkedin,
-      url: "www.linkedin.com/in/stephen-ogunjobi-367aba368",
-      color: "hover:text-blue-400",
-    },
+    // To restore, uncomment and add FaLinkedin back to the react-icons/fa import
+    // {
+    //   name: "LinkedIn",
+    //   icon: FaLinkedin,
+    //   url: "www.linkedin.com/in/stephen-ogunjobi-367aba368",
+    //   color: "hover:text-blue-400",
+    // },
     {
       name: "Email",
       icon: FaEnvelope,

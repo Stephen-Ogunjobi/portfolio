@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ExternalLink, Github, Lock } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
   const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
@@ -399,7 +399,7 @@ export default function Projects() {
                       <ExternalLink className="w-4 h-4" />
                       Live Demo
                     </a>
-                    {project.githubUrl ? (
+                    {project.githubUrl && (
                       <a
                         href={project.githubUrl}
                         target="_blank"
@@ -409,11 +409,6 @@ export default function Projects() {
                         <Github className="w-4 h-4" />
                         View Code
                       </a>
-                    ) : (
-                      <span className="inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:px-2 sm:py-3 text-gray-500 text-sm font-medium">
-                        <Lock className="w-4 h-4" />
-                        Private codebase
-                      </span>
                     )}
                   </div>
                 </div>
